@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.credly.newsfreak.libs.ActionBar
+		android:id="@+id/actionbar" style="@style/ActionBar" />
+	<LinearLayout android:orientation="vertical"
+		android:background="@android:color/white" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:id="@+id/topnews">
+		<TextView android:layout_width="fill_parent" android:id="@+id/topic"
+			android:layout_weight="2" android:layout_height="50px"
+			android:textColor="@android:color/white" android:background="@android:color/black"
+			android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+		<ListView android:id="@+id/list" android:layout_width="fill_parent"
+			android:divider="@android:color/black" android:layout_height="fill_parent"
+			android:layout_weight="2" android:drawSelectorOnTop="true"
+			android:focusable="false" android:focusableInTouchMode="false"
+			android:smoothScrollbar="true" android:scrollbarStyle="insideOverlay"
+			android:dividerHeight="2px" android:choiceMode="none">
+		</ListView>
+	</LinearLayout>
+
+</LinearLayout>

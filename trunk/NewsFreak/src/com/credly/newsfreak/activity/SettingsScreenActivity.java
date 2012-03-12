@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.credly.newsfreak.R;
 import com.credly.newsfreak.R.id;
@@ -42,11 +43,11 @@ public class SettingsScreenActivity extends Activity
 		setContentView(R.layout.settings);
 
 		ArrayList<SettingsArray> settingsArray = new ArrayList<SettingsArray>();
-		settingsArray.add(new SettingsArray(R.drawable.arrow_up, "About"));
-		settingsArray.add(new SettingsArray(R.drawable.arrow_up, "Version"));
-		settingsArray.add(new SettingsArray(R.drawable.arrow_up, "Settings"));
-		settingsArray.add(new SettingsArray(R.drawable.arrow_up, "Rate"));
-		settingsArray.add(new SettingsArray(R.drawable.arrow_up, "Feedback"));
+		settingsArray.add(new SettingsArray(R.drawable.info, "About"));
+		settingsArray.add(new SettingsArray(R.drawable.info, "Version"));
+		settingsArray.add(new SettingsArray(R.drawable.info, "Settings"));
+		settingsArray.add(new SettingsArray(R.drawable.info, "Rate"));
+		settingsArray.add(new SettingsArray(R.drawable.info, "Feedback"));
 
 		final ActionBar actionBar = (ActionBar) findViewById(R.id.settingsScreenActionbar);
 		actionBar.setTitle("Settings");
@@ -77,8 +78,12 @@ public class SettingsScreenActivity extends Activity
 					@SuppressWarnings("rawtypes") AdapterView parent,
 					View view, int position, long id)
 			{
-				//pd = ProgressDialog.show(SettingsScreenActivity.this, "",
-				//		"Loading...");
+				Toast.makeText(getApplicationContext(), position+"", Toast.LENGTH_LONG).show();
+				Intent intent = new Intent(SettingsScreenActivity.this,
+						AboutScreenActivity.class);
+				startActivity(intent);
+				overridePendingTransition(R.anim.slide_in_left,
+						R.anim.slide_out_left);
 
 			}
 		});

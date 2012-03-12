@@ -27,5 +27,7 @@
 			android:label="Comments" android:theme="@android:style/Theme.NoTitleBar" />
 		<activity android:name="com.credly.newsfreak.activity.NewsWebViewActivity"
 			android:theme="@android:style/Theme.NoTitleBar" />
+		<activity android:name="com.credly.newsfreak.activity.HelpScreenActivity"
+			android:theme="@android:style/Theme.NoTitleBar" />
 	</application>
 </manifest>

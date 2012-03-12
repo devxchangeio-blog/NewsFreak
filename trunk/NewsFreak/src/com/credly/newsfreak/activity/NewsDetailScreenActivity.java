@@ -14,8 +14,6 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -156,13 +154,13 @@ public class NewsDetailScreenActivity extends Activity
 
 	/**
 	 * 
-	 */
+	 *//*
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		new MenuInflater(getApplication()).inflate(R.menu.menu, menu);
 		return (super.onPrepareOptionsMenu(menu));
 
-	}
+	}*/
 
 	private Intent createShareIntent()
 	{

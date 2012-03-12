@@ -122,7 +122,9 @@ public class NFDemoActivity extends Activity
 							public void run()
 							{
 
-								PopulateModel.populateNewsList(actionItem.getTitle().toLowerCase(),topic.getText().toString());
+								PopulateModel.populateNewsList(actionItem
+										.getTitle().toLowerCase(), topic
+										.getText().toString());
 								handler.sendEmptyMessage(0);
 
 							}
@@ -151,7 +153,7 @@ public class NFDemoActivity extends Activity
 					public void run()
 					{
 
-						PopulateModel.populateNewsList("topnews",topic
+						PopulateModel.populateNewsList("topnews", topic
 								.getText().toString());
 						handler.sendEmptyMessage(0);
 
@@ -184,7 +186,7 @@ public class NFDemoActivity extends Activity
 
 		ActionItem topnewsItem = new ActionItem(1, "Top News");
 		ActionItem newswireItem = new ActionItem(2, "News Wire");
-		//ActionItem newsroomItem = new ActionItem(3, "News Room");
+		// ActionItem newsroomItem = new ActionItem(3, "News Room");
 
 		final QuickAction qAction = new QuickAction(this,
 				QuickAction.HORIZONTAL);
@@ -192,7 +194,7 @@ public class NFDemoActivity extends Activity
 		// add action items into QuickAction
 		qAction.addActionItem(topnewsItem);
 		qAction.addActionItem(newswireItem);
-		//qAction.addActionItem(newsroomItem);
+		// qAction.addActionItem(newsroomItem);
 
 		qAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener()
 		{
@@ -357,11 +359,11 @@ public class NFDemoActivity extends Activity
 			overridePendingTransition(R.anim.slide_in_left,
 					R.anim.slide_out_left);
 
-		} else if (topic.equals("settings"))
+		} else if (topic.equals("about"))
 		{
 
 			Intent intent = new Intent(NFDemoActivity.this,
-					SettingsScreenActivity.class);
+					HelpScreenActivity.class);
 			startActivity(intent);
 			overridePendingTransition(R.anim.slide_in_left,
 					R.anim.slide_out_left);

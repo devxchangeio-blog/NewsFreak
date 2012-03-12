@@ -6,10 +6,8 @@ package com.credly.newsfreak.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.credly.newsfreak.R;
-import com.credly.newsfreak.R.id;
 import com.credly.newsfreak.utils.PopulateModel;
 
 /**
@@ -18,15 +16,15 @@ import com.credly.newsfreak.utils.PopulateModel;
  */
 public class SplashScreenActivity extends Activity
 {
-	private TextView title = null;
+	//private TextView title = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splashscreen);
-		title = (TextView) findViewById(id.textView1);
-		title.setText("Credly Inc");
+		//title = (TextView) findViewById(id.textView1);
+		//title.setText("Credly Inc");
 		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
 		creatingSplashScreen();
 
